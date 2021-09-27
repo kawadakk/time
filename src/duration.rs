@@ -332,7 +332,7 @@ impl Duration {
     }
 
     /// Returns the raw value of duration.
-    #[cfg(any(target_env = "sgx", target_os = "solid-asp3"))]
+    #[cfg(any(target_env = "sgx", target_os = "solid_asp3"))]
     pub(crate) fn raw(&self) -> (i64, i32) {
         (self.secs, self.nanos)
     }

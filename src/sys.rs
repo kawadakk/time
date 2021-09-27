@@ -5,7 +5,7 @@ pub use self::inner::*;
 #[cfg(any(
     all(target_arch = "wasm32", not(target_os = "emscripten")),
     target_env = "sgx",
-    target_os = "solid-asp3"
+    target_os = "solid_asp3"
 ))]
 mod common {
     use Tm;
@@ -211,7 +211,7 @@ mod inner {
     }
 }
 
-#[cfg(any(target_env = "sgx", target_os = "solid-asp3"))]
+#[cfg(any(target_env = "sgx", target_os = "solid_asp3"))]
 mod inner {
     use super::common::{time_to_tm, tm_to_time};
     use std::ops::{Add, Sub};
